@@ -21,8 +21,6 @@
             ]
         ]
     ];
-
-    //vedere for each
 ?>
 
 <!DOCTYPE html>
@@ -34,18 +32,22 @@
     <title>Document</title>
 </head>
 <body>
-    <?php 
-        for ($i = 0; $i < count($db['teachers']); $i++) {
-            ?> <div style="background-color:grey;"><?php echo $db['teachers'][$i]['name'];?> - <?php echo $db['teachers'][$i]['lastname'];?></div>
-        <?php
-        }
-    ?>
-
-<?php 
-        for ($i = 0; $i < count($db['pm']); $i++) {
-            ?> <div style="background-color:green;"><?php echo $db['pm'][$i]['name'];?> - <?php echo $db['pm'][$i]['lastname'];?></div>
-        <?php
-        }
-    ?>
+<?php
+    foreach ($db as $key => $value ){
+      ?>
+      <?php
+      for ($i = 0; $i < count($db[$key]); $i++){
+      ?>
+      <div style='background-color:<?php echo ($key == 'teachers'? 'gray' : 'green') ?>;'>
+        <?php echo $db[$key][$i]['name'] ?>
+        <?php echo $db[$key][$i]['lastname'] ?>
+      </div>
+      <?php
+      }
+      ?>
+      <hr>
+      <?php
+    };
+    ?> 
 </body>
 </html>
