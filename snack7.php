@@ -33,7 +33,7 @@ $db = [
 <body>
     <?php 
         for ($i = 0; $i < count($db); $i++) {
-            ?> <div>alunno:<?php echo $db[$i]['name'];?>  <?php echo$db[$i]['lastname']?> Voti: <?php echo calculate_average($db[$i]['valutation']) ?></div>
+            ?> <div>alunno:<?php echo $db[$i]['name'];?>  <?php echo$db[$i]['lastname']?> Voti: <?php echo round(calculate_average($db[$i]['valutation']), 1) ?></div>
             <?php
         }
     ?>
