@@ -37,6 +37,8 @@
             ]
         ],
     ];
+
+    // foreach da usare
 ?>
 
 <!DOCTYPE html>
