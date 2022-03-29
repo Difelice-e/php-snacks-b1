@@ -2,21 +2,46 @@
     $partite = [
         [
             'casa' => 'Basket Milano',
-            'opsite' => 'Basket Roma',
+            'ospite' => 'Basket Roma',
             'punti_casa' => 45,
-            'punti_opsite' => 21,
+            'punti_ospite' => 21,
         ],
         [
             'casa' => 'Basket Pescara',
-            'opsite' => 'Basket Chieti',
+            'ospite' => 'Basket Chieti',
             'punti_casa' => 65,
-            'punti_opsite' => 81,
+            'punti_ospite' => 81,
         ],
         [
             'casa' => 'Basket Cosenza',
-            'opsite' => 'Basket Vicenza',
+            'ospite' => 'Basket Vicenza',
             'punti_casa' => 27,
-            'punti_opsite' => 69,
+            'punti_ospite' => 69,
         ],
-    ]
+    ];
+
+    // for ($i = 0; $i < count($partite); $i++) {
+    //     echo $partite[$i]['casa'];
+    //     echo '-';
+    //     echo $partite[$i]['ospite'];
+    // };
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <?php 
+        for ($i = 0; $i < count($partite); $i++) {
+            ?>
+            <div><?php echo $partite[$i]['casa'] ?> - <?php echo $partite[$i]['ospite'] ?> | <?php echo $partite[$i]['punti_casa'] ?> - <?php echo $partite[$i]['punti_ospite'] ?></div>
+            <?php
+        }
+    ?>
+</body>
+</html>
